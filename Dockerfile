@@ -1,41 +1,45 @@
-# --------------------------
-# Build Stage
-# --------------------------
+# # ✅ Run with Docker
+# # Build the image:
+# docker-compose build
+# # Start container:
+# docker-compose up
+
+# Use official Node.js image
 FROM node:18-alpine AS builder
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and lock file (if any)
+# Copy package files
 COPY package*.json tsconfig.json ./
 
-# Install all dependencies (including dev)
+# Install dependencies
 RUN npm install
 
-# Copy all project files
-COPY . .
+# Copy source code
+# COPY src ./src
+COPY public ./public
+COPY views ./views
 
-# Build TypeScript → dist/
+# Build TypeScript
 RUN npm run build
 
 # --------------------------
-# Production Stage
+# Production Image
 # --------------------------
 FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy only package.json & install prod deps
+# Copy only needed files from builder
 COPY package*.json ./
 RUN npm install --only=production
 
-# Copy build output and assets from builder
+# Copy built files & assets
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/views ./views
+COPY public ./public
+COPY views ./views
 
-# Expose port (Railway sets PORT env variable)
 EXPOSE 3000
 
-# Start the app
 CMD ["node", "dist/index.js"]
