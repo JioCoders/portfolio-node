@@ -1,0 +1,90 @@
+# ==========================
+# Node.js / Backend (API)
+# ==========================
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs
+*.log
+*.out
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+jspm_packages/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache / Temp
+.cache/
+.tmp/
+dist/
+build/
+coverage/
+.nyc_output/
+
+# Editor stuff
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Web App (Frontend)
+# ==========================
+
+# Dependency directories
+node_modules/
+
+# Build output
+/dist
+/build
+/.next
+/out
+/.nuxt
+/.vuepress/dist
+
+# Cache
+.cache/
+.npm/
+.yarn-cache/
+.next/cache/
+**/.expo/
+
+# Testing
+/coverage
+/.nyc_output
+
+# Env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Misc
+*.tgz
