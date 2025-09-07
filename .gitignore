@@ -41,19 +41,6 @@ build/
 coverage/
 .nyc_output/
 
-# Editor stuff
-.vscode/
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# OS files
-.DS_Store
-Thumbs.db
-
 # ==========================
 # Web App (Frontend)
 # ==========================
@@ -88,3 +75,29 @@ node_modules/
 
 # Misc
 *.tgz
+
+# ==========================
+# IDE / Editor
+# ==========================
+
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==========================
+# OS files
+# ==========================
+
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Docker
+# ==========================
+
+docker-compose.override.yml
+*.dockerfile.local
