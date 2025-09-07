@@ -1,8 +1,8 @@
 {
   "name": "node-express-web-ts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Jiocoders portfolio using node.js",
+  "main": "index.ts",
   "scripts": {
     "dev": "nodemon --watch --ext 'ts,json' --exec 'npm run build && npm run start'",
     "copy-assets": "cp -r views dist && cp -r public dist/public",

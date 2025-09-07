@@ -17,7 +17,7 @@ COPY package*.json tsconfig.json ./
 RUN npm install
 
 # Copy source code
-COPY src ./src
+# COPY src ./src
 COPY public ./public
 COPY views ./views
 
@@ -42,4 +42,4 @@ COPY views ./views
 
 EXPOSE 3000
 
-CMD ["node", "dist/server.js"]
+CMD ["node", "dist/index.js"]
