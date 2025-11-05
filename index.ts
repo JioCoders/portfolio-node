@@ -1,5 +1,7 @@
-import * as express from "express";
-import * as path from "path";
+// import * as express from "express";
+// import * as path from "path";
+import express = require('express');
+import path = require('path');
 
 const app = express();
 const port = parseInt(process.env.PORT) || process.argv[3] || 3000;

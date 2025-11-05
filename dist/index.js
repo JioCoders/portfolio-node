@@ -1,9 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// import * as express from "express";
+// import * as path from "path";
 var express = require("express");
 var path = require("path");
 var app = express();
-var port = parseInt(process.env.PORT) || process.argv[3] || 8080;
+var port = parseInt(process.env.PORT) || process.argv[3] || 3000;
 // Serve static files from public folder
 // Set view engine to EJS
 app
