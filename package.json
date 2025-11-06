@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "dev": "nodemon --watch --ext 'ts,json' --exec 'npm run build && npm run start'",
-    "copy-assets": "cp -r views dist && cp -r public dist/public",
+    "copy-assets": "cp -r views dist && cp -r public dist",
     "build": "tsc && npm run copy-assets",
     "start": "node dist/index.js"
   },
