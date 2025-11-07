@@ -1,5 +1,4 @@
-// import * as express from "express";
-// import * as path from "path";
+// Import required modules
 import express = require('express');
 import path = require('path');
 
