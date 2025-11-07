@@ -20,11 +20,15 @@ app.set('views', viewsDirs).set('view engine', 'ejs');
 
 // Routes
 app.get('/', (req, res) => {
+  console.log('Index page called');
   res.render('index');
+  console.log('Index page rendered');
 });
 
 app.get('/api', (req, res) => {
+  console.log('API call initiated');
   res.json({ msg: 'Helloo world' });
+  console.log('API call completed');
 });
 
 // Export app for serverless (Vercel) and start server locally
