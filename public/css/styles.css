@@ -1,17 +1,20 @@
-/** Add styles here */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
+    background: #f4f6f9;
     background-color: #f5f7fa;
 }
 
 header,
 footer {
+    background: linear-gradient(135deg, #1e90ff, #007acc);
     background-color: #007bff;
     color: white;
     padding: 20px 0;
     text-align: center;
+    position: relative;
 }
 
 footer {
@@ -41,9 +44,10 @@ footer {
     margin: 0 auto;
 }
 
+/* Header */
 h1 {
     margin-top: 15px;
-    color: #007bff;
+    color: #fff;
 }
 
 h2 {
@@ -86,4 +90,23 @@ h2 {
     font-size: 15px;
     color: #333;
     margin-top: 8px;
+}
+
+/* Button */
+button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #1e90ff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #005fa3;
 }
